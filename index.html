@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astralis Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="background-animation">
+        <div class="hexagon-grid"></div>
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">Astralis</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><button class="register-btn">Register</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <h1>Build the Life<br>We All Need</h1>
+            <p>A new system where we care,<br>create, and thrive together</p>
+            <button class="cta-button">Enroll for Free Today</button>
+        </section>
+
+        <section id="principles" class="principles-section">
+            <h2>What We Stand For</h2>
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <div class="icon">🏠</div>
+                    <h3>Basic Needs Met</h3>
+                    <p>Food, rest, care, and movement for all.</p>
+                </div>
+                <div class="principle-card">
+                    <div class="icon">💡</div>
+                    <h3>Purpose for Everyone</h3>
+                    <p>From kids to elders, find your drive.</p>
+                </div>
+                <div class="principle-card">
+                    <div class="icon">🤝</div>
+                    <h3>Community Returns</h3>
+                    <p>Invest in us, we invest in you.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="quote" class="quote-section">
+            <div class="quote-card">
+                <h3>Today's Inspiration</h3>
+                <p class="quote-text">Lead with strength and compassion, building a better tomorrow.</p>
+                <p class="quote-author">— Astralis</p>
+                <div class="quote-actions">
+                    <button class="quote-btn on-point">On Point</button>
+                    <button class="quote-btn not-today">Not Today</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <h2>Join Astralis</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Surname" required>
+                <input type="email" placeholder="Email" required>
+                <select name="gender">
+                    <option value="other">Prefer not to say</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 

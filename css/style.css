@@ -1,0 +1,245 @@
+:root {
+    --navy: #1E2630;
+    --gray: #4A5568;
+    --turquoise: #00BFB3;
+    --light: #F7F7F7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--navy);
+    color: var(--light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Background Animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hexagon-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: 
+        linear-gradient(60deg, var(--turquoise) 1px, transparent 1px),
+        linear-gradient(-60deg, var(--turquoise) 1px, transparent 1px);
+    background-size: 40px 70px;
+}
+
+.gradient-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+        rgba(0, 191, 179, 0.2) 0%,
+        rgba(30, 38, 48, 0.95) 70%);
+}
+
+/* Navigation */
+header {
+    padding: 1.5rem;
+    background-color: rgba(30, 38, 48, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--turquoise);
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--turquoise);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--turquoise);
+}
+
+/* Buttons */
+.cta-button, .register-btn {
+    background-color: var(--turquoise);
+    color: var(--navy);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover, .register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 191, 179, 0.3);
+}
+
+/* Principles Section */
+.principles-section {
+    padding: 4rem 2rem;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.principle-card {
+    background-color: rgba(74, 85, 104, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 191, 179, 0.2);
+    transition: transform 0.3s;
+}
+
+.principle-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Quote Section */
+.quote-section {
+    padding: 2rem;
+}
+
+.quote-card {
+    background-color: rgba(74, 85, 104, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 191, 179, 0.2);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quote-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.quote-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.quote-btn.on-point {
+    background-color: var(--turquoise);
+    color: var(--navy);
+}
+
+.quote-btn.not-today {
+    background-color: var(--gray);
+    color: var(--light);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--navy);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 50px auto;
+    border: 1px solid var(--turquoise);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, select {
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--gray);
+    background-color: rgba(74, 85, 104, 0.1);
+    color: var(--light);
+}
+
+.submit-btn {
+    background-color: var(--turquoise);
+    color: var(--navy);
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} 
